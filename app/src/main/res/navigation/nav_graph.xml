@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/truckMainFragment"
+        android:name="com.example.trucktrackingsystem.fragments.TruckMainFragment"
+        android:label="TruckMainFragment" >
+        <action
+            android:id="@+id/action_truckMainFragment_to_addWork22"
+            app:destination="@id/addWork2" />
+        <action
+            android:id="@+id/action_truckMainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addWork2"
+        android:name="com.example.trucktrackingsystem.fragments.AddWork"
+        android:label="AddWork" >
+        <action
+            android:id="@+id/action_addWork2_to_truckMainFragment"
+            app:destination="@id/truckMainFragment"
+            app:popUpTo="@id/truckMainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.trucktrackingsystem.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/customerMainFragment"
+        android:name="com.example.trucktrackingsystem.fragments.CustomerMainFragment"
+        android:label="CustomerMainFragment" >
+        <action
+            android:id="@+id/action_customerMainFragment_to_truckDetailsFragment"
+            app:destination="@id/truckDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/truckDetailsFragment"
+        android:name="com.example.trucktrackingsystem.fragments.TruckDetailsFragment"
+        android:label="TruckDetailsFragment" >
+        <action
+            android:id="@+id/action_truckDetailsFragment_to_truckLocationFragment"
+            app:destination="@id/truckLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.trucktrackingsystem.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_truckRegistration"
+            app:destination="@id/truckRegistration" />
+    </fragment>
+    <fragment
+        android:id="@+id/truckRegistration"
+        android:name="com.example.trucktrackingsystem.fragments.TruckRegistration"
+        android:label="TruckRegistration" >
+        <action
+            android:id="@+id/action_truckRegistration_to_truckMainFragment"
+            app:destination="@id/truckMainFragment" />
+        <action
+            android:id="@+id/action_truckRegistration_to_customerMainFragment"
+            app:destination="@id/customerMainFragment" />
+        <argument
+            android:name="case"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_truckRegistration_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/truckLocationFragment"
+        android:name="com.example.trucktrackingsystem.fragments.TruckLocationFragment"
+        android:label="TruckLocationFragment" >
+        <action
+            android:id="@+id/action_truckLocationFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.trucktrackingsystem.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <argument
+            android:name="lat"
+            app:argType="string" />
+        <argument
+            android:name="lon"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.trucktrackingsystem.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <argument
+            android:name="key"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_loginFragment_to_truckMainFragment"
+            app:destination="@id/truckMainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_customerMainFragment"
+            app:destination="@id/customerMainFragment" />
+    </fragment>
+</navigation>

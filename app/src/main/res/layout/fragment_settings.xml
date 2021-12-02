@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.example.trucktrackingsystem.viewModel.TruckViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.SettingsFragment">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="25dp"
+            android:layout_below="@id/toolbar">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:text="@{model._name}"
+                android:hint="Name"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:fontFamily="@font/spartanreg" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:hint="email.."
+                android:textSize="15sp"
+                android:text="@{model._email}"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/spartanreg" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:hint="Phone.."
+                android:layout_marginTop="25dp"
+                android:text="@{model._phone}"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:fontFamily="@font/spartanreg" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:hint="Truck type.."
+                android:layout_marginTop="25dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:text="@{model._truckType}"
+                android:fontFamily="@font/spartanreg" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:hint="Truck Number.."
+                android:layout_marginTop="25dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="@{model._truckNumber}"
+                android:padding="8dp"
+                android:fontFamily="@font/spartanreg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GPS \nTracking"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/spartanreg"
+                    android:textColor="@color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:id="@+id/gps_switch"
+                    android:layout_marginStart="75dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

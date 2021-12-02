@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+    <variable
+        name="model"
+        type="com.example.trucktrackingsystem.viewModel.TruckViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp"
+        tools:context=".fragments.TruckLocationFragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/driverName"
+            android:text="Driver Name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            android:fontFamily="@font/spartanmedium500" />
+
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="115dp"
+            android:id="@+id/truckType"
+            android:text="Tata"
+            android:fontFamily="@font/spartanmedium500"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="30dp" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="135dp"
+            android:layout_height="55dp"
+            android:id="@+id/source_loc"
+            app:strokeColor="@color/teal_200"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/truckType"
+            android:layout_marginTop="30dp"
+            app:strokeWidth="0.5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Source"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/sText"
+                android:textSize="14sp"
+                android:fontFamily="@font/spartanmedium500"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/right_arrow"
+            app:layout_constraintStart_toEndOf="@id/source_loc"
+            app:layout_constraintTop_toTopOf="@id/source_loc"
+            app:layout_constraintBottom_toBottomOf="@id/source_loc"
+            android:layout_margin="7dp"
+            android:src="@drawable/ic_baseline_arrow_right_alt_24" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="135dp"
+            android:layout_height="55dp"
+            android:id="@+id/dest_loc"
+            android:layout_marginStart="7dp"
+            app:strokeColor="@color/teal_200"
+            app:layout_constraintStart_toEndOf="@id/right_arrow"
+            app:layout_constraintTop_toTopOf="@id/source_loc"
+            app:strokeWidth="0.5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Destination"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/dText"
+                android:textSize="14sp"
+                android:fontFamily="@font/spartanmedium500"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lat"
+            android:textSize="15sp"
+            android:fontFamily="@font/spartanmedium500"
+            android:id="@+id/lat"
+            app:layout_constraintTop_toBottomOf="@id/source_loc"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@id/source_loc" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{model._locationData.lat}"
+            android:hint="25.63"
+            android:textSize="15sp"
+            android:fontFamily="@font/spartanmedium500"
+            android:id="@+id/lat_value"
+            app:layout_constraintTop_toBottomOf="@id/lat"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@id/source_loc" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lat"
+            android:textSize="15sp"
+            android:fontFamily="@font/spartanmedium500"
+            android:id="@+id/lon"
+            app:layout_constraintTop_toBottomOf="@id/source_loc"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@id/dest_loc" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{model._locationData.lon}"
+            android:hint="75.03"
+            android:textSize="15sp"
+            android:fontFamily="@font/spartanmedium500"
+            android:id="@+id/lon_value"
+            app:layout_constraintTop_toBottomOf="@id/lat"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@id/dest_loc" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/map_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="135dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_baseline_location_on_24"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

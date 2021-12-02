@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/drawable/ic_baseline_arrow_downward_24.xml" value="0.2490740740740741" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/drawable/ic_baseline_arrow_right_alt_24.xml" value="0.2490740740740741" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/activity_main.xml" value="0.12158054711246201" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/activity_splash.xml" value="0.1793478260869565" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_add_work.xml" value="0.16666666666666666" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_check.xml" value="0.17300724637681159" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_customer_main.xml" value="0.15307971014492755" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_default.xml" value="0.17300724637681159" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_home.xml" value="0.16485507246376813" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_login.xml" value="0.17572463768115942" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_registration_fragmenta.xml" value="0.16485507246376813" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_result.xml" value="0.1716485507246377" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_settings.xml" value="0.15307971014492755" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_truck_details.xml" value="0.15307971014492755" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_truck_location.xml" value="0.14402173913043478" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_truck_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/fragment_truck_registration.xml" value="0.15307971014492755" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/layout/item_truck_details.xml" value="0.15307971014492755" />
+        <entry key="..\:/TruckTrackingSystem/app/src/main/res/menu/options_menu.xml" value="0.18703703703703703" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

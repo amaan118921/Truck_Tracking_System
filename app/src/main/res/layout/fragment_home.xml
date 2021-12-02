@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        tools:context=".fragments.HomeFragment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/m1"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            app:strokeColor="@color/teal_200"
+            app:strokeWidth="0.5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/spartanmedium500"
+                android:gravity="center"
+                android:text="Truck Portal"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:id="@+id/m2"
+            android:layout_below="@id/m1"
+            app:strokeColor="@color/teal_200"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            app:strokeWidth="0.5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Users/Customer Portal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/sText"
+                android:textSize="16sp"
+                android:fontFamily="@font/spartanmedium500"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+</layout>

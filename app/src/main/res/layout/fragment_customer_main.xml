@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.CustomerMainFragment">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/toolbar" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Specify Route \nfor Truck Details"
+            android:textSize="18sp"
+            android:fontFamily="@font/spartanmedium500"
+            android:gravity="center"
+            android:id="@+id/this_one"
+            android:layout_below="@id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/source_loc"
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/this_one"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            app:strokeColor="@color/teal_200"
+            app:strokeWidth="0.5dp">
+
+            <EditText
+                android:id="@+id/sText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:background="@null"
+                android:fontFamily="@font/spartanmedium500"
+                android:hint="Source Location"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="250dp"
+            android:layout_below="@id/source_loc"
+            android:layout_height="55dp"
+            app:strokeColor="@color/teal_200"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            app:strokeWidth="0.5dp"
+            android:id="@+id/destination_loc">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Destination Location"
+                android:padding="4dp"
+                android:id="@+id/dText"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:textSize="14sp"
+                android:fontFamily="@font/spartanmedium500"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:id="@+id/select_date"
+            app:strokeColor="@color/teal_200"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/destination_loc"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="25dp"
+            app:strokeWidth="0.5dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Date"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/date_Text"
+                android:textSize="16sp"
+                android:fontFamily="@font/spartanmedium500"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <ImageView
+            android:id="@+id/down_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/source_loc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/select_date"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_baseline_chevron_right_24"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+</layout>
